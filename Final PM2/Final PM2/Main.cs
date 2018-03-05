@@ -16,5 +16,29 @@ namespace Final_PM2
         {
             InitializeComponent();
         }
+
+        private void customerBttn_Click(object sender, EventArgs e)
+        {
+            SearchCustomer mySearcedCustomer = new SearchCustomer();
+
+            mySearcedCustomer.ShowDialog();
+        }
+
+        private void invoiceBttn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void partsBttn_Click(object sender, EventArgs e)
+        {
+            SearchParts mySearchedPart = new SearchParts();
+
+            mySearchedPart.ShowDialog();
+        }
+
+        private void vehicleBttn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
