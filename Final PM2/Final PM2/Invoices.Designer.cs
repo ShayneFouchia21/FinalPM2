@@ -1,6 +1,6 @@
 ﻿namespace Final_PM2
 {
-    partial class SearchCustomer
+    partial class Invoices
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchCustomer));
-            this._Joes_AutomotivesDataSet2 = new Final_PM2._Joes_AutomotivesDataSet2();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.CustomerTableAdapter();
-            this.tableAdapterManager = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager();
-            this.customerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoices));
+            this._Joes_AutomotiveInvoice = new Final_PM2._Joes_AutomotiveInvoice();
+            this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoicesTableAdapter = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.InvoicesTableAdapter();
+            this.tableAdapterManager = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager();
+            this.invoicesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,58 +46,55 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.customerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.customerDataGridView = new System.Windows.Forms.DataGridView();
+            this.invoicesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.invoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSearchTextbox = new System.Windows.Forms.TextBox();
-            this.Lbl = new System.Windows.Forms.Label();
+            this.invoiceSearchTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.searchBttn = new System.Windows.Forms.Button();
             this.backBttn = new System.Windows.Forms.Button();
             this.showInfo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).BeginInit();
-            this.customerBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingNavigator)).BeginInit();
+            this.invoicesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // _Joes_AutomotivesDataSet2
+            // _Joes_AutomotiveInvoice
             // 
-            this._Joes_AutomotivesDataSet2.DataSetName = "_Joes_AutomotivesDataSet2";
-            this._Joes_AutomotivesDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._Joes_AutomotiveInvoice.DataSetName = "_Joes_AutomotiveInvoice";
+            this._Joes_AutomotiveInvoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // customerBindingSource
+            // invoicesBindingSource
             // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this._Joes_AutomotivesDataSet2;
+            this.invoicesBindingSource.DataMember = "Invoices";
+            this.invoicesBindingSource.DataSource = this._Joes_AutomotiveInvoice;
             // 
-            // customerTableAdapter
+            // invoicesTableAdapter
             // 
-            this.customerTableAdapter.ClearBeforeFill = true;
+            this.invoicesTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
-            this.tableAdapterManager.InvoicesTableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.InvoicesTableAdapter = this.invoicesTableAdapter;
             this.tableAdapterManager.PartsTableAdapter = null;
             this.tableAdapterManager.TableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VehicleTableAdapter = null;
             // 
-            // customerBindingNavigator
+            // invoicesBindingNavigator
             // 
-            this.customerBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.customerBindingNavigator.BindingSource = this.customerBindingSource;
-            this.customerBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.customerBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.customerBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.invoicesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.invoicesBindingNavigator.BindingSource = this.invoicesBindingSource;
+            this.invoicesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.invoicesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.invoicesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -109,17 +106,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.customerBindingNavigatorSaveItem});
-            this.customerBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.customerBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.customerBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.customerBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.customerBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.customerBindingNavigator.Name = "customerBindingNavigator";
-            this.customerBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.customerBindingNavigator.Size = new System.Drawing.Size(742, 25);
-            this.customerBindingNavigator.TabIndex = 0;
-            this.customerBindingNavigator.Text = "bindingNavigator1";
+            this.invoicesBindingNavigatorSaveItem});
+            this.invoicesBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.invoicesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.invoicesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.invoicesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.invoicesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.invoicesBindingNavigator.Name = "invoicesBindingNavigator";
+            this.invoicesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.invoicesBindingNavigator.Size = new System.Drawing.Size(459, 25);
+            this.invoicesBindingNavigator.TabIndex = 0;
+            this.invoicesBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -206,38 +203,36 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // customerBindingNavigatorSaveItem
+            // invoicesBindingNavigatorSaveItem
             // 
-            this.customerBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.customerBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("customerBindingNavigatorSaveItem.Image")));
-            this.customerBindingNavigatorSaveItem.Name = "customerBindingNavigatorSaveItem";
-            this.customerBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.customerBindingNavigatorSaveItem.Text = "Save Data";
-            this.customerBindingNavigatorSaveItem.Click += new System.EventHandler(this.customerBindingNavigatorSaveItem_Click);
+            this.invoicesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.invoicesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("invoicesBindingNavigatorSaveItem.Image")));
+            this.invoicesBindingNavigatorSaveItem.Name = "invoicesBindingNavigatorSaveItem";
+            this.invoicesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.invoicesBindingNavigatorSaveItem.Text = "Save Data";
+            this.invoicesBindingNavigatorSaveItem.Click += new System.EventHandler(this.invoicesBindingNavigatorSaveItem_Click_1);
             // 
-            // customerDataGridView
+            // invoicesDataGridView
             // 
-            this.customerDataGridView.AutoGenerateColumns = false;
-            this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.invoicesDataGridView.AutoGenerateColumns = false;
+            this.invoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoicesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.customerDataGridView.DataSource = this.customerBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(0, 28);
-            this.customerDataGridView.Name = "customerDataGridView";
-            this.customerDataGridView.Size = new System.Drawing.Size(739, 220);
-            this.customerDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn4});
+            this.invoicesDataGridView.DataSource = this.invoicesBindingSource;
+            this.invoicesDataGridView.Location = new System.Drawing.Point(0, 28);
+            this.invoicesDataGridView.Name = "invoicesDataGridView";
+            this.invoicesDataGridView.Size = new System.Drawing.Size(444, 220);
+            this.invoicesDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Customer ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Customer ID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Invoice ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Invoice ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -247,99 +242,81 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Adress";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Adress";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Date";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Phone Number";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Phone Number";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Total Price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Total Price";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // dataGridViewTextBoxColumn5
+            // invoiceSearchTextbox
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email Adress";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Email Adress";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.invoiceSearchTextbox.Location = new System.Drawing.Point(275, 254);
+            this.invoiceSearchTextbox.Name = "invoiceSearchTextbox";
+            this.invoiceSearchTextbox.Size = new System.Drawing.Size(169, 20);
+            this.invoiceSearchTextbox.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn6
+            // label1
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Vehicle";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Vehicle";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Invoices";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Invoices";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // customerSearchTextbox
-            // 
-            this.customerSearchTextbox.Location = new System.Drawing.Point(333, 280);
-            this.customerSearchTextbox.Name = "customerSearchTextbox";
-            this.customerSearchTextbox.Size = new System.Drawing.Size(169, 20);
-            this.customerSearchTextbox.TabIndex = 2;
-            // 
-            // Lbl
-            // 
-            this.Lbl.AutoSize = true;
-            this.Lbl.Location = new System.Drawing.Point(167, 283);
-            this.Lbl.Name = "Lbl";
-            this.Lbl.Size = new System.Drawing.Size(109, 13);
-            this.Lbl.TabIndex = 3;
-            this.Lbl.Text = "Search For Customer:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(156, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Search For An Invoice:";
             // 
             // searchBttn
             // 
             this.searchBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBttn.Location = new System.Drawing.Point(333, 306);
+            this.searchBttn.Location = new System.Drawing.Point(275, 280);
             this.searchBttn.Name = "searchBttn";
             this.searchBttn.Size = new System.Drawing.Size(75, 23);
-            this.searchBttn.TabIndex = 4;
+            this.searchBttn.TabIndex = 6;
             this.searchBttn.Text = "Search";
             this.searchBttn.UseVisualStyleBackColor = true;
             // 
             // backBttn
             // 
-            this.backBttn.Location = new System.Drawing.Point(427, 306);
+            this.backBttn.Location = new System.Drawing.Point(369, 280);
             this.backBttn.Name = "backBttn";
             this.backBttn.Size = new System.Drawing.Size(75, 23);
-            this.backBttn.TabIndex = 5;
+            this.backBttn.TabIndex = 7;
             this.backBttn.Text = "Back";
             this.backBttn.UseVisualStyleBackColor = true;
             // 
             // showInfo
             // 
-            this.showInfo.Location = new System.Drawing.Point(379, 335);
+            this.showInfo.Location = new System.Drawing.Point(324, 309);
             this.showInfo.Name = "showInfo";
             this.showInfo.Size = new System.Drawing.Size(79, 45);
-            this.showInfo.TabIndex = 6;
-            this.showInfo.Text = "Show Info On Customer";
+            this.showInfo.TabIndex = 8;
+            this.showInfo.Text = "Show Info On Invoice";
             this.showInfo.UseVisualStyleBackColor = true;
             // 
-            // SearchCustomer
+            // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 395);
+            this.ClientSize = new System.Drawing.Size(459, 453);
             this.Controls.Add(this.showInfo);
             this.Controls.Add(this.backBttn);
             this.Controls.Add(this.searchBttn);
-            this.Controls.Add(this.Lbl);
-            this.Controls.Add(this.customerSearchTextbox);
-            this.Controls.Add(this.customerDataGridView);
-            this.Controls.Add(this.customerBindingNavigator);
-            this.Name = "SearchCustomer";
-            this.Text = "SearchCustomer";
-            this.Load += new System.EventHandler(this.SearchCustomer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).EndInit();
-            this.customerBindingNavigator.ResumeLayout(false);
-            this.customerBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.invoiceSearchTextbox);
+            this.Controls.Add(this.invoicesDataGridView);
+            this.Controls.Add(this.invoicesBindingNavigator);
+            this.Name = "Invoices";
+            this.Text = "Invoices";
+            this.Load += new System.EventHandler(this.Invoices_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingNavigator)).EndInit();
+            this.invoicesBindingNavigator.ResumeLayout(false);
+            this.invoicesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,11 +324,11 @@
 
         #endregion
 
-        private _Joes_AutomotivesDataSet2 _Joes_AutomotivesDataSet2;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private _Joes_AutomotivesDataSet2TableAdapters.CustomerTableAdapter customerTableAdapter;
-        private _Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator customerBindingNavigator;
+        private _Joes_AutomotiveInvoice _Joes_AutomotiveInvoice;
+        private System.Windows.Forms.BindingSource invoicesBindingSource;
+        private _Joes_AutomotiveInvoiceTableAdapters.InvoicesTableAdapter invoicesTableAdapter;
+        private _Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator invoicesBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -363,17 +340,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton customerBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView customerDataGridView;
+        private System.Windows.Forms.ToolStripButton invoicesBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView invoicesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.TextBox customerSearchTextbox;
-        private System.Windows.Forms.Label Lbl;
+        private System.Windows.Forms.TextBox invoiceSearchTextbox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button searchBttn;
         private System.Windows.Forms.Button backBttn;
         private System.Windows.Forms.Button showInfo;

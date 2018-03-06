@@ -27,6 +27,8 @@ namespace Final_PM2
 
         private void CarInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Joes_AutomotivesDataSet2.Vehicle' table. You can move, or remove it, as needed.
+            this.vehicleTableAdapter1.Fill(this._Joes_AutomotivesDataSet2.Vehicle);
             // TODO: This line of code loads data into the '_Joes_AutomotivesDataSet1.Vehicle' table. You can move, or remove it, as needed.
             this.vehicleTableAdapter.Fill(this._Joes_AutomotivesDataSet1.Vehicle);
 
