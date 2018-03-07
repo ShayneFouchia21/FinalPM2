@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerInfo));
             System.Windows.Forms.Label customer_IDLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label adressLabel;
@@ -36,11 +37,7 @@
             System.Windows.Forms.Label email_AdressLabel;
             System.Windows.Forms.Label vehicleLabel;
             System.Windows.Forms.Label invoicesLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerInfo));
-            this._Joes_AutomotivesDataSet2 = new Final_PM2._Joes_AutomotivesDataSet2();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.CustomerTableAdapter();
-            this.tableAdapterManager = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager();
+            System.Windows.Forms.Label alternate_Phone_NumberLabel;
             this.customerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -54,6 +51,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.customerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.backBttn = new System.Windows.Forms.Button();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Joes_AutomotivesDataSet2 = new Final_PM2._Joes_AutomotivesDataSet2();
+            this.customerTableAdapter = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager = new Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager();
+            this._Joes_AutomotiveInvoice = new Final_PM2._Joes_AutomotiveInvoice();
+            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter1 = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager1 = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager();
             this.customer_IDTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.adressTextBox = new System.Windows.Forms.TextBox();
@@ -61,7 +67,7 @@
             this.email_AdressTextBox = new System.Windows.Forms.TextBox();
             this.vehicleTextBox = new System.Windows.Forms.TextBox();
             this.invoicesTextBox = new System.Windows.Forms.TextBox();
-            this.backBttn = new System.Windows.Forms.Button();
+            this.alternate_Phone_NumberTextBox = new System.Windows.Forms.TextBox();
             customer_IDLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             adressLabel = new System.Windows.Forms.Label();
@@ -69,98 +75,14 @@
             email_AdressLabel = new System.Windows.Forms.Label();
             vehicleLabel = new System.Windows.Forms.Label();
             invoicesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            alternate_Phone_NumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).BeginInit();
             this.customerBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // customer_IDLabel
-            // 
-            customer_IDLabel.AutoSize = true;
-            customer_IDLabel.Location = new System.Drawing.Point(203, 81);
-            customer_IDLabel.Name = "customer_IDLabel";
-            customer_IDLabel.Size = new System.Drawing.Size(68, 13);
-            customer_IDLabel.TabIndex = 1;
-            customer_IDLabel.Text = "Customer ID:";
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(203, 107);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 3;
-            nameLabel.Text = "Name:";
-            // 
-            // adressLabel
-            // 
-            adressLabel.AutoSize = true;
-            adressLabel.Location = new System.Drawing.Point(203, 133);
-            adressLabel.Name = "adressLabel";
-            adressLabel.Size = new System.Drawing.Size(42, 13);
-            adressLabel.TabIndex = 5;
-            adressLabel.Text = "Adress:";
-            // 
-            // phone_NumberLabel
-            // 
-            phone_NumberLabel.AutoSize = true;
-            phone_NumberLabel.Location = new System.Drawing.Point(203, 159);
-            phone_NumberLabel.Name = "phone_NumberLabel";
-            phone_NumberLabel.Size = new System.Drawing.Size(81, 13);
-            phone_NumberLabel.TabIndex = 7;
-            phone_NumberLabel.Text = "Phone Number:";
-            // 
-            // email_AdressLabel
-            // 
-            email_AdressLabel.AutoSize = true;
-            email_AdressLabel.Location = new System.Drawing.Point(203, 185);
-            email_AdressLabel.Name = "email_AdressLabel";
-            email_AdressLabel.Size = new System.Drawing.Size(70, 13);
-            email_AdressLabel.TabIndex = 9;
-            email_AdressLabel.Text = "Email Adress:";
-            // 
-            // vehicleLabel
-            // 
-            vehicleLabel.AutoSize = true;
-            vehicleLabel.Location = new System.Drawing.Point(203, 211);
-            vehicleLabel.Name = "vehicleLabel";
-            vehicleLabel.Size = new System.Drawing.Size(45, 13);
-            vehicleLabel.TabIndex = 11;
-            vehicleLabel.Text = "Vehicle:";
-            // 
-            // invoicesLabel
-            // 
-            invoicesLabel.AutoSize = true;
-            invoicesLabel.Location = new System.Drawing.Point(203, 237);
-            invoicesLabel.Name = "invoicesLabel";
-            invoicesLabel.Size = new System.Drawing.Size(50, 13);
-            invoicesLabel.TabIndex = 13;
-            invoicesLabel.Text = "Invoices:";
-            // 
-            // _Joes_AutomotivesDataSet2
-            // 
-            this._Joes_AutomotivesDataSet2.DataSetName = "_Joes_AutomotivesDataSet2";
-            this._Joes_AutomotivesDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this._Joes_AutomotivesDataSet2;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
-            this.tableAdapterManager.InvoicesTableAdapter = null;
-            this.tableAdapterManager.PartsTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VehicleTableAdapter = null;
             // 
             // customerBindingNavigator
             // 
@@ -286,62 +208,6 @@
             this.customerBindingNavigatorSaveItem.Text = "Save Data";
             this.customerBindingNavigatorSaveItem.Click += new System.EventHandler(this.customerBindingNavigatorSaveItem_Click);
             // 
-            // customer_IDTextBox
-            // 
-            this.customer_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Customer ID", true));
-            this.customer_IDTextBox.Location = new System.Drawing.Point(290, 78);
-            this.customer_IDTextBox.Name = "customer_IDTextBox";
-            this.customer_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.customer_IDTextBox.TabIndex = 2;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(290, 104);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextBox.TabIndex = 4;
-            // 
-            // adressTextBox
-            // 
-            this.adressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Adress", true));
-            this.adressTextBox.Location = new System.Drawing.Point(290, 130);
-            this.adressTextBox.Name = "adressTextBox";
-            this.adressTextBox.Size = new System.Drawing.Size(100, 20);
-            this.adressTextBox.TabIndex = 6;
-            // 
-            // phone_NumberTextBox
-            // 
-            this.phone_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Phone Number", true));
-            this.phone_NumberTextBox.Location = new System.Drawing.Point(290, 156);
-            this.phone_NumberTextBox.Name = "phone_NumberTextBox";
-            this.phone_NumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.phone_NumberTextBox.TabIndex = 8;
-            // 
-            // email_AdressTextBox
-            // 
-            this.email_AdressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Email Adress", true));
-            this.email_AdressTextBox.Location = new System.Drawing.Point(290, 182);
-            this.email_AdressTextBox.Name = "email_AdressTextBox";
-            this.email_AdressTextBox.Size = new System.Drawing.Size(100, 20);
-            this.email_AdressTextBox.TabIndex = 10;
-            // 
-            // vehicleTextBox
-            // 
-            this.vehicleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Vehicle", true));
-            this.vehicleTextBox.Location = new System.Drawing.Point(290, 208);
-            this.vehicleTextBox.Name = "vehicleTextBox";
-            this.vehicleTextBox.Size = new System.Drawing.Size(100, 20);
-            this.vehicleTextBox.TabIndex = 12;
-            // 
-            // invoicesTextBox
-            // 
-            this.invoicesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Invoices", true));
-            this.invoicesTextBox.Location = new System.Drawing.Point(290, 234);
-            this.invoicesTextBox.Name = "invoicesTextBox";
-            this.invoicesTextBox.Size = new System.Drawing.Size(100, 20);
-            this.invoicesTextBox.TabIndex = 14;
-            // 
             // backBttn
             // 
             this.backBttn.Location = new System.Drawing.Point(303, 260);
@@ -351,12 +217,191 @@
             this.backBttn.Text = "Back";
             this.backBttn.UseVisualStyleBackColor = true;
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this._Joes_AutomotivesDataSet2;
+            // 
+            // _Joes_AutomotivesDataSet2
+            // 
+            this._Joes_AutomotivesDataSet2.DataSetName = "_Joes_AutomotivesDataSet2";
+            this._Joes_AutomotivesDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager.InvoicesTableAdapter = null;
+            this.tableAdapterManager.PartsTableAdapter = null;
+            this.tableAdapterManager.TableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotivesDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VehicleTableAdapter = null;
+            // 
+            // _Joes_AutomotiveInvoice
+            // 
+            this._Joes_AutomotiveInvoice.DataSetName = "_Joes_AutomotiveInvoice";
+            this._Joes_AutomotiveInvoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource1
+            // 
+            this.customerBindingSource1.DataMember = "Customer";
+            this.customerBindingSource1.DataSource = this._Joes_AutomotiveInvoice;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.CustomerTableAdapter = this.customerTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customer_IDLabel
+            // 
+            customer_IDLabel.AutoSize = true;
+            customer_IDLabel.Location = new System.Drawing.Point(171, 55);
+            customer_IDLabel.Name = "customer_IDLabel";
+            customer_IDLabel.Size = new System.Drawing.Size(68, 13);
+            customer_IDLabel.TabIndex = 15;
+            customer_IDLabel.Text = "Customer ID:";
+            // 
+            // customer_IDTextBox
+            // 
+            this.customer_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Customer ID", true));
+            this.customer_IDTextBox.Location = new System.Drawing.Point(303, 52);
+            this.customer_IDTextBox.Name = "customer_IDTextBox";
+            this.customer_IDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customer_IDTextBox.TabIndex = 16;
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(171, 81);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 17;
+            nameLabel.Text = "Name:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(303, 78);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 18;
+            // 
+            // adressLabel
+            // 
+            adressLabel.AutoSize = true;
+            adressLabel.Location = new System.Drawing.Point(171, 107);
+            adressLabel.Name = "adressLabel";
+            adressLabel.Size = new System.Drawing.Size(42, 13);
+            adressLabel.TabIndex = 19;
+            adressLabel.Text = "Adress:";
+            // 
+            // adressTextBox
+            // 
+            this.adressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Adress", true));
+            this.adressTextBox.Location = new System.Drawing.Point(303, 104);
+            this.adressTextBox.Name = "adressTextBox";
+            this.adressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.adressTextBox.TabIndex = 20;
+            // 
+            // phone_NumberLabel
+            // 
+            phone_NumberLabel.AutoSize = true;
+            phone_NumberLabel.Location = new System.Drawing.Point(171, 133);
+            phone_NumberLabel.Name = "phone_NumberLabel";
+            phone_NumberLabel.Size = new System.Drawing.Size(81, 13);
+            phone_NumberLabel.TabIndex = 21;
+            phone_NumberLabel.Text = "Phone Number:";
+            // 
+            // phone_NumberTextBox
+            // 
+            this.phone_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Phone Number", true));
+            this.phone_NumberTextBox.Location = new System.Drawing.Point(303, 130);
+            this.phone_NumberTextBox.Name = "phone_NumberTextBox";
+            this.phone_NumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phone_NumberTextBox.TabIndex = 22;
+            // 
+            // email_AdressLabel
+            // 
+            email_AdressLabel.AutoSize = true;
+            email_AdressLabel.Location = new System.Drawing.Point(171, 159);
+            email_AdressLabel.Name = "email_AdressLabel";
+            email_AdressLabel.Size = new System.Drawing.Size(70, 13);
+            email_AdressLabel.TabIndex = 23;
+            email_AdressLabel.Text = "Email Adress:";
+            // 
+            // email_AdressTextBox
+            // 
+            this.email_AdressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Email Adress", true));
+            this.email_AdressTextBox.Location = new System.Drawing.Point(303, 156);
+            this.email_AdressTextBox.Name = "email_AdressTextBox";
+            this.email_AdressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.email_AdressTextBox.TabIndex = 24;
+            // 
+            // vehicleLabel
+            // 
+            vehicleLabel.AutoSize = true;
+            vehicleLabel.Location = new System.Drawing.Point(171, 185);
+            vehicleLabel.Name = "vehicleLabel";
+            vehicleLabel.Size = new System.Drawing.Size(45, 13);
+            vehicleLabel.TabIndex = 25;
+            vehicleLabel.Text = "Vehicle:";
+            // 
+            // vehicleTextBox
+            // 
+            this.vehicleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Vehicle", true));
+            this.vehicleTextBox.Location = new System.Drawing.Point(303, 182);
+            this.vehicleTextBox.Name = "vehicleTextBox";
+            this.vehicleTextBox.Size = new System.Drawing.Size(100, 20);
+            this.vehicleTextBox.TabIndex = 26;
+            // 
+            // invoicesLabel
+            // 
+            invoicesLabel.AutoSize = true;
+            invoicesLabel.Location = new System.Drawing.Point(171, 211);
+            invoicesLabel.Name = "invoicesLabel";
+            invoicesLabel.Size = new System.Drawing.Size(50, 13);
+            invoicesLabel.TabIndex = 27;
+            invoicesLabel.Text = "Invoices:";
+            // 
+            // invoicesTextBox
+            // 
+            this.invoicesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Invoices", true));
+            this.invoicesTextBox.Location = new System.Drawing.Point(303, 208);
+            this.invoicesTextBox.Name = "invoicesTextBox";
+            this.invoicesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.invoicesTextBox.TabIndex = 28;
+            // 
+            // alternate_Phone_NumberLabel
+            // 
+            alternate_Phone_NumberLabel.AutoSize = true;
+            alternate_Phone_NumberLabel.Location = new System.Drawing.Point(171, 237);
+            alternate_Phone_NumberLabel.Name = "alternate_Phone_NumberLabel";
+            alternate_Phone_NumberLabel.Size = new System.Drawing.Size(126, 13);
+            alternate_Phone_NumberLabel.TabIndex = 29;
+            alternate_Phone_NumberLabel.Text = "Alternate Phone Number:";
+            // 
+            // alternate_Phone_NumberTextBox
+            // 
+            this.alternate_Phone_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource1, "Alternate Phone Number", true));
+            this.alternate_Phone_NumberTextBox.Location = new System.Drawing.Point(303, 234);
+            this.alternate_Phone_NumberTextBox.Name = "alternate_Phone_NumberTextBox";
+            this.alternate_Phone_NumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.alternate_Phone_NumberTextBox.TabIndex = 30;
+            // 
             // CustomerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 306);
-            this.Controls.Add(this.backBttn);
+            this.ClientSize = new System.Drawing.Size(527, 339);
             this.Controls.Add(customer_IDLabel);
             this.Controls.Add(this.customer_IDTextBox);
             this.Controls.Add(nameLabel);
@@ -371,15 +416,20 @@
             this.Controls.Add(this.vehicleTextBox);
             this.Controls.Add(invoicesLabel);
             this.Controls.Add(this.invoicesTextBox);
+            this.Controls.Add(alternate_Phone_NumberLabel);
+            this.Controls.Add(this.alternate_Phone_NumberTextBox);
+            this.Controls.Add(this.backBttn);
             this.Controls.Add(this.customerBindingNavigator);
             this.Name = "CustomerInfo";
             this.Text = "CustomerInfo";
             this.Load += new System.EventHandler(this.CustomerInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).EndInit();
             this.customerBindingNavigator.ResumeLayout(false);
             this.customerBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotivesDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,6 +454,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton customerBindingNavigatorSaveItem;
+        private System.Windows.Forms.Button backBttn;
+        private _Joes_AutomotiveInvoice _Joes_AutomotiveInvoice;
+        private System.Windows.Forms.BindingSource customerBindingSource1;
+        private _Joes_AutomotiveInvoiceTableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private _Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.TextBox customer_IDTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox adressTextBox;
@@ -411,6 +466,6 @@
         private System.Windows.Forms.TextBox email_AdressTextBox;
         private System.Windows.Forms.TextBox vehicleTextBox;
         private System.Windows.Forms.TextBox invoicesTextBox;
-        private System.Windows.Forms.Button backBttn;
+        private System.Windows.Forms.TextBox alternate_Phone_NumberTextBox;
     }
 }

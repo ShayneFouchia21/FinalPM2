@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label invoice_IDLabel;
+            System.Windows.Forms.Label nameLabel;
+            System.Windows.Forms.Label dateLabel;
+            System.Windows.Forms.Label total_PriceLabel;
             this.headerLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.outputIDLbl = new System.Windows.Forms.Label();
+            this.outputNameLbl = new System.Windows.Forms.Label();
+            this.outputDateLbl = new System.Windows.Forms.Label();
+            this.outputTotalLbl = new System.Windows.Forms.Label();
+            invoice_IDLabel = new System.Windows.Forms.Label();
+            nameLabel = new System.Windows.Forms.Label();
+            dateLabel = new System.Windows.Forms.Label();
+            total_PriceLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerLbl
@@ -45,51 +53,87 @@
             this.headerLbl.TabIndex = 5;
             this.headerLbl.Text = "Joe\'s Automotive";
             // 
-            // label1
+            // invoice_IDLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            invoice_IDLabel.AutoSize = true;
+            invoice_IDLabel.Location = new System.Drawing.Point(77, 121);
+            invoice_IDLabel.Name = "invoice_IDLabel";
+            invoice_IDLabel.Size = new System.Drawing.Size(59, 13);
+            invoice_IDLabel.TabIndex = 6;
+            invoice_IDLabel.Text = "Invoice ID:";
             // 
-            // label2
+            // nameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "label2";
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(77, 179);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 7;
+            nameLabel.Text = "Name:";
             // 
-            // label3
+            // dateLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "label3";
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(77, 226);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(33, 13);
+            dateLabel.TabIndex = 8;
+            dateLabel.Text = "Date:";
             // 
-            // label4
+            // total_PriceLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 324);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            total_PriceLabel.AutoSize = true;
+            total_PriceLabel.Location = new System.Drawing.Point(77, 274);
+            total_PriceLabel.Name = "total_PriceLabel";
+            total_PriceLabel.Size = new System.Drawing.Size(61, 13);
+            total_PriceLabel.TabIndex = 9;
+            total_PriceLabel.Text = "Total Price:";
+            // 
+            // outputIDLbl
+            // 
+            this.outputIDLbl.AutoSize = true;
+            this.outputIDLbl.Location = new System.Drawing.Point(212, 121);
+            this.outputIDLbl.Name = "outputIDLbl";
+            this.outputIDLbl.Size = new System.Drawing.Size(0, 13);
+            this.outputIDLbl.TabIndex = 10;
+            // 
+            // outputNameLbl
+            // 
+            this.outputNameLbl.AutoSize = true;
+            this.outputNameLbl.Location = new System.Drawing.Point(212, 179);
+            this.outputNameLbl.Name = "outputNameLbl";
+            this.outputNameLbl.Size = new System.Drawing.Size(0, 13);
+            this.outputNameLbl.TabIndex = 11;
+            // 
+            // outputDateLbl
+            // 
+            this.outputDateLbl.AutoSize = true;
+            this.outputDateLbl.Location = new System.Drawing.Point(212, 226);
+            this.outputDateLbl.Name = "outputDateLbl";
+            this.outputDateLbl.Size = new System.Drawing.Size(0, 13);
+            this.outputDateLbl.TabIndex = 12;
+            // 
+            // outputTotalLbl
+            // 
+            this.outputTotalLbl.AutoSize = true;
+            this.outputTotalLbl.Location = new System.Drawing.Point(212, 274);
+            this.outputTotalLbl.Name = "outputTotalLbl";
+            this.outputTotalLbl.Size = new System.Drawing.Size(0, 13);
+            this.outputTotalLbl.TabIndex = 13;
             // 
             // PrintInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 535);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.outputTotalLbl);
+            this.Controls.Add(this.outputDateLbl);
+            this.Controls.Add(this.outputNameLbl);
+            this.Controls.Add(this.outputIDLbl);
+            this.Controls.Add(total_PriceLabel);
+            this.Controls.Add(dateLabel);
+            this.Controls.Add(nameLabel);
+            this.Controls.Add(invoice_IDLabel);
             this.Controls.Add(this.headerLbl);
             this.Name = "PrintInvoice";
             this.Text = "PrintInvoice";
@@ -101,9 +145,9 @@
         #endregion
 
         private System.Windows.Forms.Label headerLbl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label outputIDLbl;
+        private System.Windows.Forms.Label outputNameLbl;
+        private System.Windows.Forms.Label outputDateLbl;
+        private System.Windows.Forms.Label outputTotalLbl;
     }
 }

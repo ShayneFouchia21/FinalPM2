@@ -21,16 +21,14 @@ namespace Final_PM2
         {
             this.Validate();
             this.vehicleBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this._Joes_AutomotivesDataSet1);
+            this.tableAdapterManager.UpdateAll(this._Joes_AutomotiveInvoice);
 
         }
 
         private void CarInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Joes_AutomotivesDataSet2.Vehicle' table. You can move, or remove it, as needed.
-            this.vehicleTableAdapter1.Fill(this._Joes_AutomotivesDataSet2.Vehicle);
-            // TODO: This line of code loads data into the '_Joes_AutomotivesDataSet1.Vehicle' table. You can move, or remove it, as needed.
-            this.vehicleTableAdapter.Fill(this._Joes_AutomotivesDataSet1.Vehicle);
+            // TODO: This line of code loads data into the '_Joes_AutomotiveInvoice.Vehicle' table. You can move, or remove it, as needed.
+            this.vehicleTableAdapter.Fill(this._Joes_AutomotiveInvoice.Vehicle);
 
         }
     }

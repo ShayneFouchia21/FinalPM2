@@ -433,6 +433,8 @@ namespace Final_PM2 {
             
             private global::System.Data.DataColumn columnInvoices;
             
+            private global::System.Data.DataColumn columnAlternate_Phone_Number;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CustomerDataTable() {
@@ -524,6 +526,14 @@ namespace Final_PM2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Alternate_Phone_NumberColumn {
+                get {
+                    return this.columnAlternate_Phone_Number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -559,7 +569,7 @@ namespace Final_PM2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CustomerRow AddCustomerRow(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices) {
+            public CustomerRow AddCustomerRow(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices, string Alternate_Phone_Number) {
                 CustomerRow rowCustomerRow = ((CustomerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -568,7 +578,8 @@ namespace Final_PM2 {
                         Phone_Number,
                         Email_Adress,
                         Vehicle,
-                        Invoices};
+                        Invoices,
+                        Alternate_Phone_Number};
                 rowCustomerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCustomerRow);
                 return rowCustomerRow;
@@ -605,6 +616,7 @@ namespace Final_PM2 {
                 this.columnEmail_Adress = base.Columns["Email Adress"];
                 this.columnVehicle = base.Columns["Vehicle"];
                 this.columnInvoices = base.Columns["Invoices"];
+                this.columnAlternate_Phone_Number = base.Columns["Alternate Phone Number"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -624,6 +636,8 @@ namespace Final_PM2 {
                 base.Columns.Add(this.columnVehicle);
                 this.columnInvoices = new global::System.Data.DataColumn("Invoices", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInvoices);
+                this.columnAlternate_Phone_Number = new global::System.Data.DataColumn("Alternate Phone Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAlternate_Phone_Number);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCustomer_ID}, true));
                 this.columnCustomer_ID.AutoIncrement = true;
@@ -638,6 +652,7 @@ namespace Final_PM2 {
                 this.columnEmail_Adress.MaxLength = 50;
                 this.columnVehicle.MaxLength = 50;
                 this.columnInvoices.MaxLength = 50;
+                this.columnAlternate_Phone_Number.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2155,6 +2170,22 @@ namespace Final_PM2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Alternate_Phone_Number {
+                get {
+                    try {
+                        return ((string)(this[this.tableCustomer.Alternate_Phone_NumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Alternate Phone Number\' in table \'Customer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCustomer.Alternate_Phone_NumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNameNull() {
                 return this.IsNull(this.tableCustomer.NameColumn);
             }
@@ -2223,6 +2254,18 @@ namespace Final_PM2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetInvoicesNull() {
                 this[this.tableCustomer.InvoicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAlternate_Phone_NumberNull() {
+                return this.IsNull(this.tableCustomer.Alternate_Phone_NumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAlternate_Phone_NumberNull() {
+                this[this.tableCustomer.Alternate_Phone_NumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3052,10 +3095,11 @@ namespace Final_PM2._Joes_AutomotiveInvoiceTableAdapters {
             tableMapping.ColumnMappings.Add("Email Adress", "Email Adress");
             tableMapping.ColumnMappings.Add("Vehicle", "Vehicle");
             tableMapping.ColumnMappings.Add("Invoices", "Invoices");
+            tableMapping.ColumnMappings.Add("Alternate Phone Number", "Alternate Phone Number");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Customer] WHERE (([Customer ID] = @Original_Customer_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone_Number = 1 AND [Phone Number] IS NULL) OR ([Phone Number] = @Original_Phone_Number)) AND ((@IsNull_Email_Adress = 1 AND [Email Adress] IS NULL) OR ([Email Adress] = @Original_Email_Adress)) AND ((@IsNull_Vehicle = 1 AND [Vehicle] IS NULL) OR ([Vehicle] = @Original_Vehicle)) AND ((@IsNull_Invoices = 1 AND [Invoices] IS NULL) OR ([Invoices] = @Original_Invoices)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Customer] WHERE (([Customer ID] = @Original_Customer_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone_Number = 1 AND [Phone Number] IS NULL) OR ([Phone Number] = @Original_Phone_Number)) AND ((@IsNull_Email_Adress = 1 AND [Email Adress] IS NULL) OR ([Email Adress] = @Original_Email_Adress)) AND ((@IsNull_Vehicle = 1 AND [Vehicle] IS NULL) OR ([Vehicle] = @Original_Vehicle)) AND ((@IsNull_Invoices = 1 AND [Invoices] IS NULL) OR ([Invoices] = @Original_Invoices)) AND ((@IsNull_Alternate_Phone_Number = 1 AND [Alternate Phone Number] IS NULL) OR ([Alternate Phone Number] = @Original_Alternate_Phone_Number)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Customer_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -3070,10 +3114,12 @@ namespace Final_PM2._Joes_AutomotiveInvoiceTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Invoices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alternate_Phone_Number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alternate_Phone_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Customer] ([Name], [Adress], [Phone Number], [Email Adress], [Vehicle], [Invoices]) VALUES (@Name, @Adress, @Phone_Number, @Email_Adress, @Vehicle, @Invoices);
-SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Invoices FROM Customer WHERE ([Customer ID] = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Customer] ([Name], [Adress], [Phone Number], [Email Adress], [Vehicle], [Invoices], [Alternate Phone Number]) VALUES (@Name, @Adress, @Phone_Number, @Email_Adress, @Vehicle, @Invoices, @Alternate_Phone_Number);
+SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Invoices, [Alternate Phone Number] FROM Customer WHERE ([Customer ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3081,10 +3127,11 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alternate_Phone_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Customer] SET [Name] = @Name, [Adress] = @Adress, [Phone Number] = @Phone_Number, [Email Adress] = @Email_Adress, [Vehicle] = @Vehicle, [Invoices] = @Invoices WHERE (([Customer ID] = @Original_Customer_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone_Number = 1 AND [Phone Number] IS NULL) OR ([Phone Number] = @Original_Phone_Number)) AND ((@IsNull_Email_Adress = 1 AND [Email Adress] IS NULL) OR ([Email Adress] = @Original_Email_Adress)) AND ((@IsNull_Vehicle = 1 AND [Vehicle] IS NULL) OR ([Vehicle] = @Original_Vehicle)) AND ((@IsNull_Invoices = 1 AND [Invoices] IS NULL) OR ([Invoices] = @Original_Invoices)));
-SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Invoices FROM Customer WHERE ([Customer ID] = @Customer_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Customer] SET [Name] = @Name, [Adress] = @Adress, [Phone Number] = @Phone_Number, [Email Adress] = @Email_Adress, [Vehicle] = @Vehicle, [Invoices] = @Invoices, [Alternate Phone Number] = @Alternate_Phone_Number WHERE (([Customer ID] = @Original_Customer_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone_Number = 1 AND [Phone Number] IS NULL) OR ([Phone Number] = @Original_Phone_Number)) AND ((@IsNull_Email_Adress = 1 AND [Email Adress] IS NULL) OR ([Email Adress] = @Original_Email_Adress)) AND ((@IsNull_Vehicle = 1 AND [Vehicle] IS NULL) OR ([Vehicle] = @Original_Vehicle)) AND ((@IsNull_Invoices = 1 AND [Invoices] IS NULL) OR ([Invoices] = @Original_Invoices)) AND ((@IsNull_Alternate_Phone_Number = 1 AND [Alternate Phone Number] IS NULL) OR ([Alternate Phone Number] = @Original_Alternate_Phone_Number)));
+SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Invoices, [Alternate Phone Number] FROM Customer WHERE ([Customer ID] = @Customer_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3092,6 +3139,7 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alternate_Phone_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Customer_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3105,6 +3153,8 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Invoices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alternate_Phone_Number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alternate_Phone_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alternate Phone Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3122,7 +3172,7 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Invo" +
-                "ices FROM dbo.Customer";
+                "ices, [Alternate Phone Number] FROM Customer";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3183,7 +3233,7 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Customer_ID, string Original_Name, string Original_Adress, string Original_Phone_Number, string Original_Email_Adress, string Original_Vehicle, string Original_Invoices) {
+        public virtual int Delete(int Original_Customer_ID, string Original_Name, string Original_Adress, string Original_Phone_Number, string Original_Email_Adress, string Original_Vehicle, string Original_Invoices, string Original_Alternate_Phone_Number) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Customer_ID));
             if ((Original_Name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -3233,6 +3283,14 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Invoices));
             }
+            if ((Original_Alternate_Phone_Number == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Alternate_Phone_Number));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3253,7 +3311,7 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices) {
+        public virtual int Insert(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices, string Alternate_Phone_Number) {
             if ((Name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3290,6 +3348,12 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Invoices));
             }
+            if ((Alternate_Phone_Number == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Alternate_Phone_Number));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3310,7 +3374,23 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices, int Original_Customer_ID, string Original_Name, string Original_Adress, string Original_Phone_Number, string Original_Email_Adress, string Original_Vehicle, string Original_Invoices, int Customer_ID) {
+        public virtual int Update(
+                    string Name, 
+                    string Adress, 
+                    string Phone_Number, 
+                    string Email_Adress, 
+                    string Vehicle, 
+                    string Invoices, 
+                    string Alternate_Phone_Number, 
+                    int Original_Customer_ID, 
+                    string Original_Name, 
+                    string Original_Adress, 
+                    string Original_Phone_Number, 
+                    string Original_Email_Adress, 
+                    string Original_Vehicle, 
+                    string Original_Invoices, 
+                    string Original_Alternate_Phone_Number, 
+                    int Customer_ID) {
             if ((Name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3347,56 +3427,70 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Invoices));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Customer_ID));
-            if ((Original_Name == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((Alternate_Phone_Number == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Alternate_Phone_Number));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Customer_ID));
+            if ((Original_Name == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Name));
             }
             if ((Original_Adress == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Adress));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Adress));
             }
             if ((Original_Phone_Number == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Phone_Number));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Phone_Number));
             }
             if ((Original_Email_Adress == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Email_Adress));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Email_Adress));
             }
             if ((Original_Vehicle == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Vehicle));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Vehicle));
             }
             if ((Original_Invoices == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Invoices));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Invoices));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Customer_ID));
+            if ((Original_Alternate_Phone_Number == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Alternate_Phone_Number));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Customer_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3417,8 +3511,8 @@ SELECT [Customer ID], Name, Adress, [Phone Number], [Email Adress], Vehicle, Inv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices, int Original_Customer_ID, string Original_Name, string Original_Adress, string Original_Phone_Number, string Original_Email_Adress, string Original_Vehicle, string Original_Invoices) {
-            return this.Update(Name, Adress, Phone_Number, Email_Adress, Vehicle, Invoices, Original_Customer_ID, Original_Name, Original_Adress, Original_Phone_Number, Original_Email_Adress, Original_Vehicle, Original_Invoices, Original_Customer_ID);
+        public virtual int Update(string Name, string Adress, string Phone_Number, string Email_Adress, string Vehicle, string Invoices, string Alternate_Phone_Number, int Original_Customer_ID, string Original_Name, string Original_Adress, string Original_Phone_Number, string Original_Email_Adress, string Original_Vehicle, string Original_Invoices, string Original_Alternate_Phone_Number) {
+            return this.Update(Name, Adress, Phone_Number, Email_Adress, Vehicle, Invoices, Alternate_Phone_Number, Original_Customer_ID, Original_Name, Original_Adress, Original_Phone_Number, Original_Email_Adress, Original_Vehicle, Original_Invoices, Original_Alternate_Phone_Number, Original_Customer_ID);
         }
     }
     

@@ -34,10 +34,6 @@
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label dateLabel;
             System.Windows.Forms.Label total_PriceLabel;
-            this._Joes_AutomotiveInvoice = new Final_PM2._Joes_AutomotiveInvoice();
-            this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoicesTableAdapter = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.InvoicesTableAdapter();
-            this.tableAdapterManager = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager();
             this.invoicesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -55,41 +51,20 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.dateTextBox = new System.Windows.Forms.TextBox();
             this.total_PriceTextBox = new System.Windows.Forms.TextBox();
+            this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Joes_AutomotiveInvoice = new Final_PM2._Joes_AutomotiveInvoice();
+            this.invoicesTableAdapter = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.InvoicesTableAdapter();
+            this.tableAdapterManager = new Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager();
             this.backBttn = new System.Windows.Forms.Button();
-            this.printBttn = new System.Windows.Forms.Button();
             invoice_IDLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             dateLabel = new System.Windows.Forms.Label();
             total_PriceLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingNavigator)).BeginInit();
             this.invoicesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).BeginInit();
             this.SuspendLayout();
-            // 
-            // _Joes_AutomotiveInvoice
-            // 
-            this._Joes_AutomotiveInvoice.DataSetName = "_Joes_AutomotiveInvoice";
-            this._Joes_AutomotiveInvoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // invoicesBindingSource
-            // 
-            this.invoicesBindingSource.DataMember = "Invoices";
-            this.invoicesBindingSource.DataSource = this._Joes_AutomotiveInvoice;
-            // 
-            // invoicesTableAdapter
-            // 
-            this.invoicesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = null;
-            this.tableAdapterManager.InvoicesTableAdapter = this.invoicesTableAdapter;
-            this.tableAdapterManager.PartsTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VehicleTableAdapter = null;
             // 
             // invoicesBindingNavigator
             // 
@@ -117,7 +92,7 @@
             this.invoicesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.invoicesBindingNavigator.Name = "invoicesBindingNavigator";
             this.invoicesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.invoicesBindingNavigator.Size = new System.Drawing.Size(439, 25);
+            this.invoicesBindingNavigator.Size = new System.Drawing.Size(428, 25);
             this.invoicesBindingNavigator.TabIndex = 0;
             this.invoicesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -218,7 +193,7 @@
             // invoice_IDLabel
             // 
             invoice_IDLabel.AutoSize = true;
-            invoice_IDLabel.Location = new System.Drawing.Point(126, 65);
+            invoice_IDLabel.Location = new System.Drawing.Point(120, 107);
             invoice_IDLabel.Name = "invoice_IDLabel";
             invoice_IDLabel.Size = new System.Drawing.Size(59, 13);
             invoice_IDLabel.TabIndex = 1;
@@ -227,7 +202,7 @@
             // invoice_IDTextBox
             // 
             this.invoice_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Invoice ID", true));
-            this.invoice_IDTextBox.Location = new System.Drawing.Point(193, 62);
+            this.invoice_IDTextBox.Location = new System.Drawing.Point(187, 104);
             this.invoice_IDTextBox.Name = "invoice_IDTextBox";
             this.invoice_IDTextBox.Size = new System.Drawing.Size(100, 20);
             this.invoice_IDTextBox.TabIndex = 2;
@@ -235,7 +210,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(126, 91);
+            nameLabel.Location = new System.Drawing.Point(120, 133);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 3;
@@ -244,7 +219,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(193, 88);
+            this.nameTextBox.Location = new System.Drawing.Point(187, 130);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 4;
@@ -252,7 +227,7 @@
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(126, 117);
+            dateLabel.Location = new System.Drawing.Point(120, 159);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(33, 13);
             dateLabel.TabIndex = 5;
@@ -261,7 +236,7 @@
             // dateTextBox
             // 
             this.dateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Date", true));
-            this.dateTextBox.Location = new System.Drawing.Point(193, 114);
+            this.dateTextBox.Location = new System.Drawing.Point(187, 156);
             this.dateTextBox.Name = "dateTextBox";
             this.dateTextBox.Size = new System.Drawing.Size(100, 20);
             this.dateTextBox.TabIndex = 6;
@@ -269,7 +244,7 @@
             // total_PriceLabel
             // 
             total_PriceLabel.AutoSize = true;
-            total_PriceLabel.Location = new System.Drawing.Point(126, 143);
+            total_PriceLabel.Location = new System.Drawing.Point(120, 185);
             total_PriceLabel.Name = "total_PriceLabel";
             total_PriceLabel.Size = new System.Drawing.Size(61, 13);
             total_PriceLabel.TabIndex = 7;
@@ -278,35 +253,49 @@
             // total_PriceTextBox
             // 
             this.total_PriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Total Price", true));
-            this.total_PriceTextBox.Location = new System.Drawing.Point(193, 140);
+            this.total_PriceTextBox.Location = new System.Drawing.Point(187, 182);
             this.total_PriceTextBox.Name = "total_PriceTextBox";
             this.total_PriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.total_PriceTextBox.TabIndex = 8;
             // 
+            // invoicesBindingSource
+            // 
+            this.invoicesBindingSource.DataMember = "Invoices";
+            this.invoicesBindingSource.DataSource = this._Joes_AutomotiveInvoice;
+            // 
+            // _Joes_AutomotiveInvoice
+            // 
+            this._Joes_AutomotiveInvoice.DataSetName = "_Joes_AutomotiveInvoice";
+            this._Joes_AutomotiveInvoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invoicesTableAdapter
+            // 
+            this.invoicesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.InvoicesTableAdapter = this.invoicesTableAdapter;
+            this.tableAdapterManager.PartsTableAdapter = null;
+            this.tableAdapterManager.TableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Final_PM2._Joes_AutomotiveInvoiceTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VehicleTableAdapter = null;
+            // 
             // backBttn
             // 
-            this.backBttn.Location = new System.Drawing.Point(218, 166);
+            this.backBttn.Location = new System.Drawing.Point(200, 208);
             this.backBttn.Name = "backBttn";
             this.backBttn.Size = new System.Drawing.Size(75, 23);
             this.backBttn.TabIndex = 9;
             this.backBttn.Text = "Back";
             this.backBttn.UseVisualStyleBackColor = true;
             // 
-            // printBttn
-            // 
-            this.printBttn.Location = new System.Drawing.Point(137, 166);
-            this.printBttn.Name = "printBttn";
-            this.printBttn.Size = new System.Drawing.Size(75, 34);
-            this.printBttn.TabIndex = 10;
-            this.printBttn.Text = "Print Out Invoice";
-            this.printBttn.UseVisualStyleBackColor = true;
-            // 
             // InvoiceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 307);
-            this.Controls.Add(this.printBttn);
+            this.ClientSize = new System.Drawing.Size(428, 354);
             this.Controls.Add(this.backBttn);
             this.Controls.Add(invoice_IDLabel);
             this.Controls.Add(this.invoice_IDTextBox);
@@ -320,11 +309,11 @@
             this.Name = "InvoiceInfo";
             this.Text = "InvoiceInfo";
             this.Load += new System.EventHandler(this.InvoiceInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingNavigator)).EndInit();
             this.invoicesBindingNavigator.ResumeLayout(false);
             this.invoicesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Joes_AutomotiveInvoice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,6 +343,5 @@
         private System.Windows.Forms.TextBox dateTextBox;
         private System.Windows.Forms.TextBox total_PriceTextBox;
         private System.Windows.Forms.Button backBttn;
-        private System.Windows.Forms.Button printBttn;
     }
 }
