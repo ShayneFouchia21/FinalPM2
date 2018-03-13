@@ -53,6 +53,7 @@
             this.CarsButton.TabIndex = 1;
             this.CarsButton.Text = "Car";
             this.CarsButton.UseVisualStyleBackColor = true;
+            this.CarsButton.Click += new System.EventHandler(this.CarsButton_Click);
             // 
             // PartsButton
             // 
@@ -62,6 +63,7 @@
             this.PartsButton.TabIndex = 2;
             this.PartsButton.Text = "Parts";
             this.PartsButton.UseVisualStyleBackColor = true;
+            this.PartsButton.Click += new System.EventHandler(this.PartsButton_Click);
             // 
             // InvoicesButton
             // 
@@ -71,6 +73,7 @@
             this.InvoicesButton.TabIndex = 3;
             this.InvoicesButton.Text = "Invoices";
             this.InvoicesButton.UseVisualStyleBackColor = true;
+            this.InvoicesButton.Click += new System.EventHandler(this.InvoicesButton_Click);
             // 
             // JAMLabel
             // 

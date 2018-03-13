@@ -1,6 +1,6 @@
 ﻿namespace Final
 {
-    partial class Searchcar
+    partial class SearchCar
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,7 @@
             this.backButton.TabIndex = 3;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // searchButton
             // 
@@ -68,6 +69,7 @@
             this.searchButton.TabIndex = 5;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // searchCarTextBox
             // 
@@ -173,7 +175,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Parts Available";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // Searchcar
+            // SearchCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +184,7 @@
             this.Controls.Add(this.searchCarTextBox);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.backButton);
-            this.Name = "Searchcar";
+            this.Name = "SearchCar";
             this.Text = "Searchcar";
             this.Load += new System.EventHandler(this.Searchcar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace Final
 {
-    partial class SearchInvoicess
+    partial class SearchInvoices
     {
         /// <summary>
         /// Required designer variable.
@@ -133,7 +133,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Total";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // SearchInvoicess
+            // SearchInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,8 +142,8 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchInvTextBox);
-            this.Name = "SearchInvoicess";
-            this.Text = "SearchInvoivescs";
+            this.Name = "SearchInvoices";
+            this.Text = "SearchInvoices";
             this.Load += new System.EventHandler(this.SearchInvoicess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();

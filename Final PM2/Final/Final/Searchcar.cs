@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class Searchcar : Form
+    public partial class SearchCar : Form
     {
-        public Searchcar()
+        public SearchCar()
         {
             InitializeComponent();
         }
@@ -30,6 +30,17 @@ namespace Final
             // TODO: This line of code loads data into the 'joesAutomotiveDataBaseDataSet.Vehicle' table. You can move, or remove it, as needed.
             this.vehicleTableAdapter.Fill(this.joesAutomotiveDataBaseDataSet.Vehicle);
 
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            CarInfo carInfoForm = new CarInfo();
+            carInfoForm.ShowDialog();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

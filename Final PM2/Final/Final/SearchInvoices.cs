@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class SearchInvoicess : Form
+    public partial class SearchInvoices : Form
     {
-        public SearchInvoicess()
+        public SearchInvoices()
         {
             InitializeComponent();
         }

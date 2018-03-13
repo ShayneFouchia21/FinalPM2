@@ -19,8 +19,27 @@ namespace Final
 
         private void customerButton_Click(object sender, EventArgs e)
         {
+            SearchCustomer customerForm = new SearchCustomer();
+            customerForm.ShowDialog();
             
-            
+        }
+
+        private void CarsButton_Click(object sender, EventArgs e)
+        {
+            SearchCar carForm = new SearchCar();
+            carForm.ShowDialog();
+        }
+
+        private void PartsButton_Click(object sender, EventArgs e)
+        {
+            SearchParts partForm = new SearchParts();
+            partForm.ShowDialog();
+        }
+
+        private void InvoicesButton_Click(object sender, EventArgs e)
+        {
+            SearchInvoices invoiceForm = new SearchInvoices();
+            invoiceForm.ShowDialog();
         }
     }
 }
