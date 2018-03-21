@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartsInfo));
             System.Windows.Forms.Label parts_IDLabel;
             System.Windows.Forms.Label parts_In_StockLabel;
             System.Windows.Forms.Label parts_On_OrderLabel;
             System.Windows.Forms.Label part_NameLabel;
             System.Windows.Forms.Label part_CostLabel;
             System.Windows.Forms.Label compatible_VehiclesLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartsInfo));
             this.backButton = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
             this.joesAutomotiveDataBaseDataSet = new Final.JoesAutomotiveDataBaseDataSet();
@@ -43,17 +43,17 @@
             this.partsTableAdapter = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.PartsTableAdapter();
             this.tableAdapterManager = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.TableAdapterManager();
             this.partsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.partsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.parts_IDTextBox = new System.Windows.Forms.TextBox();
             this.parts_In_StockTextBox = new System.Windows.Forms.TextBox();
@@ -62,6 +62,7 @@
             this.part_CostTextBox = new System.Windows.Forms.TextBox();
             this.compatible_VehiclesTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.notesTxtBx = new System.Windows.Forms.RichTextBox();
             parts_IDLabel = new System.Windows.Forms.Label();
             parts_In_StockLabel = new System.Windows.Forms.Label();
             parts_On_OrderLabel = new System.Windows.Forms.Label();
@@ -75,6 +76,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
+            // parts_IDLabel
+            // 
+            parts_IDLabel.AutoSize = true;
+            parts_IDLabel.Location = new System.Drawing.Point(191, 67);
+            parts_IDLabel.Name = "parts_IDLabel";
+            parts_IDLabel.Size = new System.Drawing.Size(48, 13);
+            parts_IDLabel.TabIndex = 14;
+            parts_IDLabel.Text = "Parts ID:";
+            // 
+            // parts_In_StockLabel
+            // 
+            parts_In_StockLabel.AutoSize = true;
+            parts_In_StockLabel.Location = new System.Drawing.Point(191, 93);
+            parts_In_StockLabel.Name = "parts_In_StockLabel";
+            parts_In_StockLabel.Size = new System.Drawing.Size(77, 13);
+            parts_In_StockLabel.TabIndex = 16;
+            parts_In_StockLabel.Text = "Parts In Stock:";
+            // 
+            // parts_On_OrderLabel
+            // 
+            parts_On_OrderLabel.AutoSize = true;
+            parts_On_OrderLabel.Location = new System.Drawing.Point(191, 119);
+            parts_On_OrderLabel.Name = "parts_On_OrderLabel";
+            parts_On_OrderLabel.Size = new System.Drawing.Size(80, 13);
+            parts_On_OrderLabel.TabIndex = 18;
+            parts_On_OrderLabel.Text = "Parts On Order:";
+            // 
+            // part_NameLabel
+            // 
+            part_NameLabel.AutoSize = true;
+            part_NameLabel.Location = new System.Drawing.Point(191, 145);
+            part_NameLabel.Name = "part_NameLabel";
+            part_NameLabel.Size = new System.Drawing.Size(60, 13);
+            part_NameLabel.TabIndex = 20;
+            part_NameLabel.Text = "Part Name:";
+            // 
+            // part_CostLabel
+            // 
+            part_CostLabel.AutoSize = true;
+            part_CostLabel.Location = new System.Drawing.Point(191, 171);
+            part_CostLabel.Name = "part_CostLabel";
+            part_CostLabel.Size = new System.Drawing.Size(53, 13);
+            part_CostLabel.TabIndex = 22;
+            part_CostLabel.Text = "Part Cost:";
+            // 
+            // compatible_VehiclesLabel
+            // 
+            compatible_VehiclesLabel.AutoSize = true;
+            compatible_VehiclesLabel.Location = new System.Drawing.Point(191, 197);
+            compatible_VehiclesLabel.Name = "compatible_VehiclesLabel";
+            compatible_VehiclesLabel.Size = new System.Drawing.Size(105, 13);
+            compatible_VehiclesLabel.TabIndex = 24;
+            compatible_VehiclesLabel.Text = "Compatible Vehicles:";
+            // 
             // backButton
             // 
             this.backButton.Location = new System.Drawing.Point(254, 243);
@@ -83,6 +138,7 @@
             this.backButton.TabIndex = 10;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // listBox
             // 
@@ -141,9 +197,34 @@
             this.partsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partsBindingNavigator.Name = "partsBindingNavigator";
             this.partsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partsBindingNavigator.Size = new System.Drawing.Size(643, 25);
+            this.partsBindingNavigator.Size = new System.Drawing.Size(562, 25);
             this.partsBindingNavigator.TabIndex = 14;
             this.partsBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -177,16 +258,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -209,26 +283,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // partsBindingNavigatorSaveItem
             // 
@@ -239,15 +295,6 @@
             this.partsBindingNavigatorSaveItem.Text = "Save Data";
             this.partsBindingNavigatorSaveItem.Click += new System.EventHandler(this.partsBindingNavigatorSaveItem_Click);
             // 
-            // parts_IDLabel
-            // 
-            parts_IDLabel.AutoSize = true;
-            parts_IDLabel.Location = new System.Drawing.Point(191, 67);
-            parts_IDLabel.Name = "parts_IDLabel";
-            parts_IDLabel.Size = new System.Drawing.Size(48, 13);
-            parts_IDLabel.TabIndex = 14;
-            parts_IDLabel.Text = "Parts ID:";
-            // 
             // parts_IDTextBox
             // 
             this.parts_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partsBindingSource, "Parts ID", true));
@@ -255,15 +302,6 @@
             this.parts_IDTextBox.Name = "parts_IDTextBox";
             this.parts_IDTextBox.Size = new System.Drawing.Size(100, 20);
             this.parts_IDTextBox.TabIndex = 15;
-            // 
-            // parts_In_StockLabel
-            // 
-            parts_In_StockLabel.AutoSize = true;
-            parts_In_StockLabel.Location = new System.Drawing.Point(191, 93);
-            parts_In_StockLabel.Name = "parts_In_StockLabel";
-            parts_In_StockLabel.Size = new System.Drawing.Size(77, 13);
-            parts_In_StockLabel.TabIndex = 16;
-            parts_In_StockLabel.Text = "Parts In Stock:";
             // 
             // parts_In_StockTextBox
             // 
@@ -273,15 +311,6 @@
             this.parts_In_StockTextBox.Size = new System.Drawing.Size(100, 20);
             this.parts_In_StockTextBox.TabIndex = 17;
             // 
-            // parts_On_OrderLabel
-            // 
-            parts_On_OrderLabel.AutoSize = true;
-            parts_On_OrderLabel.Location = new System.Drawing.Point(191, 119);
-            parts_On_OrderLabel.Name = "parts_On_OrderLabel";
-            parts_On_OrderLabel.Size = new System.Drawing.Size(80, 13);
-            parts_On_OrderLabel.TabIndex = 18;
-            parts_On_OrderLabel.Text = "Parts On Order:";
-            // 
             // parts_On_OrderTextBox
             // 
             this.parts_On_OrderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partsBindingSource, "Parts On Order", true));
@@ -289,15 +318,6 @@
             this.parts_On_OrderTextBox.Name = "parts_On_OrderTextBox";
             this.parts_On_OrderTextBox.Size = new System.Drawing.Size(100, 20);
             this.parts_On_OrderTextBox.TabIndex = 19;
-            // 
-            // part_NameLabel
-            // 
-            part_NameLabel.AutoSize = true;
-            part_NameLabel.Location = new System.Drawing.Point(191, 145);
-            part_NameLabel.Name = "part_NameLabel";
-            part_NameLabel.Size = new System.Drawing.Size(60, 13);
-            part_NameLabel.TabIndex = 20;
-            part_NameLabel.Text = "Part Name:";
             // 
             // part_NameTextBox
             // 
@@ -307,15 +327,6 @@
             this.part_NameTextBox.Size = new System.Drawing.Size(100, 20);
             this.part_NameTextBox.TabIndex = 21;
             // 
-            // part_CostLabel
-            // 
-            part_CostLabel.AutoSize = true;
-            part_CostLabel.Location = new System.Drawing.Point(191, 171);
-            part_CostLabel.Name = "part_CostLabel";
-            part_CostLabel.Size = new System.Drawing.Size(53, 13);
-            part_CostLabel.TabIndex = 22;
-            part_CostLabel.Text = "Part Cost:";
-            // 
             // part_CostTextBox
             // 
             this.part_CostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partsBindingSource, "Part Cost", true));
@@ -323,15 +334,6 @@
             this.part_CostTextBox.Name = "part_CostTextBox";
             this.part_CostTextBox.Size = new System.Drawing.Size(100, 20);
             this.part_CostTextBox.TabIndex = 23;
-            // 
-            // compatible_VehiclesLabel
-            // 
-            compatible_VehiclesLabel.AutoSize = true;
-            compatible_VehiclesLabel.Location = new System.Drawing.Point(191, 197);
-            compatible_VehiclesLabel.Name = "compatible_VehiclesLabel";
-            compatible_VehiclesLabel.Size = new System.Drawing.Size(105, 13);
-            compatible_VehiclesLabel.TabIndex = 24;
-            compatible_VehiclesLabel.Text = "Compatible Vehicles:";
             // 
             // compatible_VehiclesTextBox
             // 
@@ -343,17 +345,26 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(467, 76);
+            this.pictureBox.Location = new System.Drawing.Point(408, 12);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(138, 134);
             this.pictureBox.TabIndex = 26;
             this.pictureBox.TabStop = false;
             // 
+            // notesTxtBx
+            // 
+            this.notesTxtBx.Location = new System.Drawing.Point(408, 152);
+            this.notesTxtBx.Name = "notesTxtBx";
+            this.notesTxtBx.Size = new System.Drawing.Size(136, 124);
+            this.notesTxtBx.TabIndex = 32;
+            this.notesTxtBx.Text = "";
+            // 
             // PartsInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 278);
+            this.ClientSize = new System.Drawing.Size(562, 290);
+            this.Controls.Add(this.notesTxtBx);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(parts_IDLabel);
             this.Controls.Add(this.parts_IDTextBox);
@@ -412,5 +423,6 @@
         private System.Windows.Forms.TextBox part_CostTextBox;
         private System.Windows.Forms.TextBox compatible_VehiclesTextBox;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.RichTextBox notesTxtBx;
     }
 }

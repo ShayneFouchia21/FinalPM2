@@ -78,6 +78,9 @@
     <Compile Include="InvoiceInfo.Designer.cs">
       <DependentUpon>InvoiceInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoesAutomotiveDataBaseDataSet.cs">
+      <DependentUpon>JoesAutomotiveDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JoesAutomotiveDataBaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

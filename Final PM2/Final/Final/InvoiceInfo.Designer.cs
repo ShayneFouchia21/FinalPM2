@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceInfo));
             System.Windows.Forms.Label invoice_IDLabel;
             System.Windows.Forms.Label labor_CostsLabel;
             System.Windows.Forms.Label parts_UsedLabel;
             System.Windows.Forms.Label totalLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceInfo));
             this.listBox = new System.Windows.Forms.ListBox();
             this.joesAutomotiveDataBaseDataSet = new Final.JoesAutomotiveDataBaseDataSet();
             this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoicesTableAdapter = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.InvoicesTableAdapter();
             this.tableAdapterManager = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.TableAdapterManager();
             this.invoicesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.invoicesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.invoice_IDTextBox = new System.Windows.Forms.TextBox();
             this.labor_CostsTextBox = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.Button();
             this.fluidCheckBox = new System.Windows.Forms.CheckBox();
+            this.printBttn = new System.Windows.Forms.Button();
             invoice_IDLabel = new System.Windows.Forms.Label();
             labor_CostsLabel = new System.Windows.Forms.Label();
             parts_UsedLabel = new System.Windows.Forms.Label();
@@ -67,6 +68,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingNavigator)).BeginInit();
             this.invoicesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // invoice_IDLabel
+            // 
+            invoice_IDLabel.AutoSize = true;
+            invoice_IDLabel.Location = new System.Drawing.Point(189, 64);
+            invoice_IDLabel.Name = "invoice_IDLabel";
+            invoice_IDLabel.Size = new System.Drawing.Size(59, 13);
+            invoice_IDLabel.TabIndex = 32;
+            invoice_IDLabel.Text = "Invoice ID:";
+            // 
+            // labor_CostsLabel
+            // 
+            labor_CostsLabel.AutoSize = true;
+            labor_CostsLabel.Location = new System.Drawing.Point(189, 90);
+            labor_CostsLabel.Name = "labor_CostsLabel";
+            labor_CostsLabel.Size = new System.Drawing.Size(66, 13);
+            labor_CostsLabel.TabIndex = 34;
+            labor_CostsLabel.Text = "Labor Costs:";
+            // 
+            // parts_UsedLabel
+            // 
+            parts_UsedLabel.AutoSize = true;
+            parts_UsedLabel.Location = new System.Drawing.Point(189, 116);
+            parts_UsedLabel.Name = "parts_UsedLabel";
+            parts_UsedLabel.Size = new System.Drawing.Size(62, 13);
+            parts_UsedLabel.TabIndex = 36;
+            parts_UsedLabel.Text = "Parts Used:";
+            // 
+            // totalLabel
+            // 
+            totalLabel.AutoSize = true;
+            totalLabel.Location = new System.Drawing.Point(189, 142);
+            totalLabel.Name = "totalLabel";
+            totalLabel.Size = new System.Drawing.Size(34, 13);
+            totalLabel.TabIndex = 38;
+            totalLabel.Text = "Total:";
             // 
             // listBox
             // 
@@ -129,6 +166,31 @@
             this.invoicesBindingNavigator.TabIndex = 32;
             this.invoicesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -161,16 +223,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -193,26 +248,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // invoicesBindingNavigatorSaveItem
             // 
@@ -223,15 +260,6 @@
             this.invoicesBindingNavigatorSaveItem.Text = "Save Data";
             this.invoicesBindingNavigatorSaveItem.Click += new System.EventHandler(this.invoicesBindingNavigatorSaveItem_Click);
             // 
-            // invoice_IDLabel
-            // 
-            invoice_IDLabel.AutoSize = true;
-            invoice_IDLabel.Location = new System.Drawing.Point(189, 64);
-            invoice_IDLabel.Name = "invoice_IDLabel";
-            invoice_IDLabel.Size = new System.Drawing.Size(59, 13);
-            invoice_IDLabel.TabIndex = 32;
-            invoice_IDLabel.Text = "Invoice ID:";
-            // 
             // invoice_IDTextBox
             // 
             this.invoice_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Invoice ID", true));
@@ -239,15 +267,6 @@
             this.invoice_IDTextBox.Name = "invoice_IDTextBox";
             this.invoice_IDTextBox.Size = new System.Drawing.Size(100, 20);
             this.invoice_IDTextBox.TabIndex = 33;
-            // 
-            // labor_CostsLabel
-            // 
-            labor_CostsLabel.AutoSize = true;
-            labor_CostsLabel.Location = new System.Drawing.Point(189, 90);
-            labor_CostsLabel.Name = "labor_CostsLabel";
-            labor_CostsLabel.Size = new System.Drawing.Size(66, 13);
-            labor_CostsLabel.TabIndex = 34;
-            labor_CostsLabel.Text = "Labor Costs:";
             // 
             // labor_CostsTextBox
             // 
@@ -257,15 +276,6 @@
             this.labor_CostsTextBox.Size = new System.Drawing.Size(100, 20);
             this.labor_CostsTextBox.TabIndex = 35;
             // 
-            // parts_UsedLabel
-            // 
-            parts_UsedLabel.AutoSize = true;
-            parts_UsedLabel.Location = new System.Drawing.Point(189, 116);
-            parts_UsedLabel.Name = "parts_UsedLabel";
-            parts_UsedLabel.Size = new System.Drawing.Size(62, 13);
-            parts_UsedLabel.TabIndex = 36;
-            parts_UsedLabel.Text = "Parts Used:";
-            // 
             // parts_UsedTextBox
             // 
             this.parts_UsedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoicesBindingSource, "Parts Used", true));
@@ -273,15 +283,6 @@
             this.parts_UsedTextBox.Name = "parts_UsedTextBox";
             this.parts_UsedTextBox.Size = new System.Drawing.Size(100, 20);
             this.parts_UsedTextBox.TabIndex = 37;
-            // 
-            // totalLabel
-            // 
-            totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(189, 142);
-            totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(34, 13);
-            totalLabel.TabIndex = 38;
-            totalLabel.Text = "Total:";
             // 
             // totalTextBox
             // 
@@ -293,12 +294,13 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(230, 203);
+            this.backButton.Location = new System.Drawing.Point(286, 203);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 40;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // fluidCheckBox
             // 
@@ -310,11 +312,22 @@
             this.fluidCheckBox.Text = "Fluid Check ($24.99)";
             this.fluidCheckBox.UseVisualStyleBackColor = true;
             // 
+            // printBttn
+            // 
+            this.printBttn.Location = new System.Drawing.Point(176, 203);
+            this.printBttn.Name = "printBttn";
+            this.printBttn.Size = new System.Drawing.Size(75, 23);
+            this.printBttn.TabIndex = 42;
+            this.printBttn.Text = "Print Layout";
+            this.printBttn.UseVisualStyleBackColor = true;
+            this.printBttn.Click += new System.EventHandler(this.printBttn_Click);
+            // 
             // InvoiceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 238);
+            this.Controls.Add(this.printBttn);
             this.Controls.Add(this.fluidCheckBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(invoice_IDLabel);
@@ -366,5 +379,6 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.CheckBox fluidCheckBox;
+        private System.Windows.Forms.Button printBttn;
     }
 }

@@ -34,7 +34,22 @@ namespace Final
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            // closes search customer
+            this.Close();
+        }
 
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            // opens up the customer info form
+            CustomerInfo Customerinfoform = new CustomerInfo();
+            Customerinfoform.ShowDialog();
+        }
+
+        private void addBttn_Click(object sender, EventArgs e)
+        {
+            // opens up the customer info form
+            CustomerInfo Customerinfoform1 = new CustomerInfo();
+            Customerinfoform1.ShowDialog();
         }
     }
 }

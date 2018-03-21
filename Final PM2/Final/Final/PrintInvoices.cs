@@ -26,5 +26,16 @@ namespace Final
         {
 
         }
+
+        private void backBttn_Click(object sender, EventArgs e)
+        {
+            //close form
+            this.Close();
+        }
+
+        private void printBttn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

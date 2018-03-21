@@ -41,5 +41,10 @@ namespace Final
             SearchInvoices invoiceForm = new SearchInvoices();
             invoiceForm.ShowDialog();
         }
+
+        private void closeBttn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

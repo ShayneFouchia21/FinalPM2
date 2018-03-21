@@ -45,6 +45,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
@@ -59,12 +60,13 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(336, 50);
+            this.searchButton.Location = new System.Drawing.Point(278, 50);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // backButton
             // 
@@ -166,11 +168,22 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Invoices";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // addBttn
+            // 
+            this.addBttn.Location = new System.Drawing.Point(411, 51);
+            this.addBttn.Name = "addBttn";
+            this.addBttn.Size = new System.Drawing.Size(75, 23);
+            this.addBttn.TabIndex = 9;
+            this.addBttn.Text = "Add/Create";
+            this.addBttn.UseVisualStyleBackColor = true;
+            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
+            // 
             // SearchCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 337);
+            this.Controls.Add(this.addBttn);
             this.Controls.Add(this.customerDataGridView);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.searchButton);
@@ -204,5 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button addBttn;
     }
 }

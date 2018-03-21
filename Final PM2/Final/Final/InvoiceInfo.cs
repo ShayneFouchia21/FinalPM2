@@ -31,5 +31,18 @@ namespace Final
             this.invoicesTableAdapter.Fill(this.joesAutomotiveDataBaseDataSet.Invoices);
 
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            // closes invoice form
+            this.Close();
+        }
+
+        private void printBttn_Click(object sender, EventArgs e)
+        {
+            //create print info form
+            PrintInvoices printInvoice = new PrintInvoices();
+            printInvoice.ShowDialog();
+        }
     }
 }

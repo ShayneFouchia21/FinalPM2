@@ -33,6 +33,7 @@
             this.PartsButton = new System.Windows.Forms.Button();
             this.InvoicesButton = new System.Windows.Forms.Button();
             this.JAMLabel = new System.Windows.Forms.Label();
+            this.closeBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerButton
@@ -81,9 +82,19 @@
             this.JAMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JAMLabel.Location = new System.Drawing.Point(147, 51);
             this.JAMLabel.Name = "JAMLabel";
-            this.JAMLabel.Size = new System.Drawing.Size(233, 31);
+            this.JAMLabel.Size = new System.Drawing.Size(236, 31);
             this.JAMLabel.TabIndex = 4;
-            this.JAMLabel.Text = "Joe\'s automotive";
+            this.JAMLabel.Text = "Joe\'s Automotive";
+            // 
+            // closeBttn
+            // 
+            this.closeBttn.Location = new System.Drawing.Point(212, 261);
+            this.closeBttn.Name = "closeBttn";
+            this.closeBttn.Size = new System.Drawing.Size(91, 38);
+            this.closeBttn.TabIndex = 5;
+            this.closeBttn.Text = "Close";
+            this.closeBttn.UseVisualStyleBackColor = true;
+            this.closeBttn.Click += new System.EventHandler(this.closeBttn_Click);
             // 
             // Main
             // 
@@ -91,6 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(526, 311);
+            this.Controls.Add(this.closeBttn);
             this.Controls.Add(this.JAMLabel);
             this.Controls.Add(this.InvoicesButton);
             this.Controls.Add(this.PartsButton);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Button PartsButton;
         private System.Windows.Forms.Button InvoicesButton;
         private System.Windows.Forms.Label JAMLabel;
+        private System.Windows.Forms.Button closeBttn;
     }
 }
 

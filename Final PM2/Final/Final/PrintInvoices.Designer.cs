@@ -39,24 +39,14 @@
             this.outputPartsLbl = new System.Windows.Forms.Label();
             this.outputTaxLbl = new System.Windows.Forms.Label();
             this.outputTotalLbl = new System.Windows.Forms.Label();
+            this.printBttn = new System.Windows.Forms.Button();
+            this.backBttn = new System.Windows.Forms.Button();
             invoice_IDLabel = new System.Windows.Forms.Label();
             labor_CostsLabel = new System.Windows.Forms.Label();
             parts_UsedLabel = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::Final.Properties.Resources._64113100_scaled_263x156_1;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // invoice_IDLabel
             // 
@@ -94,6 +84,18 @@
             totalLabel.TabIndex = 42;
             totalLabel.Text = "Total:";
             totalLabel.Click += new System.EventHandler(this.totalLabel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::Final.Properties.Resources._64113100_scaled_263x156_1;
+            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // taxLbl
             // 
@@ -144,11 +146,33 @@
             this.outputTotalLbl.Size = new System.Drawing.Size(0, 13);
             this.outputTotalLbl.TabIndex = 48;
             // 
+            // printBttn
+            // 
+            this.printBttn.Location = new System.Drawing.Point(94, 350);
+            this.printBttn.Name = "printBttn";
+            this.printBttn.Size = new System.Drawing.Size(75, 23);
+            this.printBttn.TabIndex = 49;
+            this.printBttn.Text = "Print";
+            this.printBttn.UseVisualStyleBackColor = true;
+            this.printBttn.Click += new System.EventHandler(this.printBttn_Click);
+            // 
+            // backBttn
+            // 
+            this.backBttn.Location = new System.Drawing.Point(207, 350);
+            this.backBttn.Name = "backBttn";
+            this.backBttn.Size = new System.Drawing.Size(75, 23);
+            this.backBttn.TabIndex = 50;
+            this.backBttn.Text = "Back";
+            this.backBttn.UseVisualStyleBackColor = true;
+            this.backBttn.Click += new System.EventHandler(this.backBttn_Click);
+            // 
             // PrintInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 385);
+            this.Controls.Add(this.backBttn);
+            this.Controls.Add(this.printBttn);
             this.Controls.Add(this.outputTotalLbl);
             this.Controls.Add(this.outputTaxLbl);
             this.Controls.Add(this.outputPartsLbl);
@@ -177,5 +201,7 @@
         private System.Windows.Forms.Label outputPartsLbl;
         private System.Windows.Forms.Label outputTaxLbl;
         private System.Windows.Forms.Label outputTotalLbl;
+        private System.Windows.Forms.Button printBttn;
+        private System.Windows.Forms.Button backBttn;
     }
 }

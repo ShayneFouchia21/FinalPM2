@@ -46,6 +46,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleDataGridView)).BeginInit();
@@ -63,7 +64,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(442, 38);
+            this.searchButton.Location = new System.Drawing.Point(365, 38);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 5;
@@ -175,11 +176,22 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Parts Available";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // addBttn
+            // 
+            this.addBttn.Location = new System.Drawing.Point(516, 38);
+            this.addBttn.Name = "addBttn";
+            this.addBttn.Size = new System.Drawing.Size(75, 23);
+            this.addBttn.TabIndex = 8;
+            this.addBttn.Text = "Add/Create";
+            this.addBttn.UseVisualStyleBackColor = true;
+            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
+            // 
             // SearchCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 334);
+            this.Controls.Add(this.addBttn);
             this.Controls.Add(this.vehicleDataGridView);
             this.Controls.Add(this.searchCarTextBox);
             this.Controls.Add(this.searchButton);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button addBttn;
     }
 }

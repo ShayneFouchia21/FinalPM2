@@ -41,6 +41,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGridView)).BeginInit();
@@ -55,12 +56,13 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(164, 38);
+            this.searchButton.Location = new System.Drawing.Point(113, 38);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 6;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // backButton
             // 
@@ -70,6 +72,7 @@
             this.backButton.TabIndex = 8;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // joesAutomotiveDataBaseDataSet
             // 
@@ -133,11 +136,22 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Total";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // addBttn
+            // 
+            this.addBttn.Location = new System.Drawing.Point(207, 38);
+            this.addBttn.Name = "addBttn";
+            this.addBttn.Size = new System.Drawing.Size(75, 23);
+            this.addBttn.TabIndex = 10;
+            this.addBttn.Text = "Add/Create";
+            this.addBttn.UseVisualStyleBackColor = true;
+            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
+            // 
             // SearchInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 324);
+            this.Controls.Add(this.addBttn);
             this.Controls.Add(this.invoicesDataGridView);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.searchButton);
@@ -167,5 +181,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button addBttn;
     }
 }

@@ -43,6 +43,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsDataGridView)).BeginInit();
@@ -57,12 +58,13 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(273, 38);
+            this.searchButton.Location = new System.Drawing.Point(231, 38);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 7;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // backButton
             // 
@@ -72,6 +74,7 @@
             this.backButton.TabIndex = 9;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // joesAutomotiveDataBaseDataSet
             // 
@@ -149,11 +152,22 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Compatible Vehicles";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // addBttn
+            // 
+            this.addBttn.Location = new System.Drawing.Point(312, 38);
+            this.addBttn.Name = "addBttn";
+            this.addBttn.Size = new System.Drawing.Size(75, 23);
+            this.addBttn.TabIndex = 11;
+            this.addBttn.Text = "Add/Create";
+            this.addBttn.UseVisualStyleBackColor = true;
+            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
+            // 
             // SearchParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 413);
+            this.Controls.Add(this.addBttn);
             this.Controls.Add(this.partsDataGridView);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.searchButton);
@@ -185,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button addBttn;
     }
 }

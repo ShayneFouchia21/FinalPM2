@@ -31,5 +31,25 @@ namespace Final
             this.partsTableAdapter.Fill(this.joesAutomotiveDataBaseDataSet.Parts);
 
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            //This opens up the PartsInfo form
+            PartsInfo partInfoForm = new PartsInfo();
+            partInfoForm.ShowDialog();
+        }
+
+        private void addBttn_Click(object sender, EventArgs e)
+        {
+            //This opens up the PartsInfo form
+            PartsInfo partInfo = new PartsInfo();
+            partInfo.ShowDialog();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //closes the current form.
+            this.Close();
+        }
     }
 }

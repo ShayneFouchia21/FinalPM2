@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarInfo));
             System.Windows.Forms.Label vINLabel;
             System.Windows.Forms.Label modelLabel;
             System.Windows.Forms.Label yearLabel;
@@ -39,6 +38,7 @@
             System.Windows.Forms.Label ownerLabel;
             System.Windows.Forms.Label invoicesLabel;
             System.Windows.Forms.Label parts_AvailableLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarInfo));
             this.backButton = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
             this.joesAutomotiveDataBaseDataSet = new Final.JoesAutomotiveDataBaseDataSet();
@@ -46,17 +46,17 @@
             this.vehicleTableAdapter = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.VehicleTableAdapter();
             this.tableAdapterManager = new Final.JoesAutomotiveDataBaseDataSetTableAdapters.TableAdapterManager();
             this.vehicleBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vehicleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.vINTextBox = new System.Windows.Forms.TextBox();
             this.modelTextBox = new System.Windows.Forms.TextBox();
@@ -68,6 +68,7 @@
             this.invoicesTextBox = new System.Windows.Forms.TextBox();
             this.parts_AvailableTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.notesTxtBx = new System.Windows.Forms.RichTextBox();
             vINLabel = new System.Windows.Forms.Label();
             modelLabel = new System.Windows.Forms.Label();
             yearLabel = new System.Windows.Forms.Label();
@@ -84,6 +85,87 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
+            // vINLabel
+            // 
+            vINLabel.AutoSize = true;
+            vINLabel.Location = new System.Drawing.Point(191, 56);
+            vINLabel.Name = "vINLabel";
+            vINLabel.Size = new System.Drawing.Size(28, 13);
+            vINLabel.TabIndex = 12;
+            vINLabel.Text = "VIN:";
+            // 
+            // modelLabel
+            // 
+            modelLabel.AutoSize = true;
+            modelLabel.Location = new System.Drawing.Point(191, 82);
+            modelLabel.Name = "modelLabel";
+            modelLabel.Size = new System.Drawing.Size(39, 13);
+            modelLabel.TabIndex = 14;
+            modelLabel.Text = "Model:";
+            // 
+            // yearLabel
+            // 
+            yearLabel.AutoSize = true;
+            yearLabel.Location = new System.Drawing.Point(191, 108);
+            yearLabel.Name = "yearLabel";
+            yearLabel.Size = new System.Drawing.Size(32, 13);
+            yearLabel.TabIndex = 16;
+            yearLabel.Text = "Year:";
+            // 
+            // mileageLabel
+            // 
+            mileageLabel.AutoSize = true;
+            mileageLabel.Location = new System.Drawing.Point(191, 134);
+            mileageLabel.Name = "mileageLabel";
+            mileageLabel.Size = new System.Drawing.Size(47, 13);
+            mileageLabel.TabIndex = 18;
+            mileageLabel.Text = "Mileage:";
+            // 
+            // date_RecievedLabel
+            // 
+            date_RecievedLabel.AutoSize = true;
+            date_RecievedLabel.Location = new System.Drawing.Point(191, 160);
+            date_RecievedLabel.Name = "date_RecievedLabel";
+            date_RecievedLabel.Size = new System.Drawing.Size(82, 13);
+            date_RecievedLabel.TabIndex = 20;
+            date_RecievedLabel.Text = "Date Recieved:";
+            // 
+            // date_ReturnedLabel
+            // 
+            date_ReturnedLabel.AutoSize = true;
+            date_ReturnedLabel.Location = new System.Drawing.Point(191, 186);
+            date_ReturnedLabel.Name = "date_ReturnedLabel";
+            date_ReturnedLabel.Size = new System.Drawing.Size(80, 13);
+            date_ReturnedLabel.TabIndex = 22;
+            date_ReturnedLabel.Text = "Date Returned:";
+            // 
+            // ownerLabel
+            // 
+            ownerLabel.AutoSize = true;
+            ownerLabel.Location = new System.Drawing.Point(191, 212);
+            ownerLabel.Name = "ownerLabel";
+            ownerLabel.Size = new System.Drawing.Size(41, 13);
+            ownerLabel.TabIndex = 24;
+            ownerLabel.Text = "Owner:";
+            // 
+            // invoicesLabel
+            // 
+            invoicesLabel.AutoSize = true;
+            invoicesLabel.Location = new System.Drawing.Point(191, 238);
+            invoicesLabel.Name = "invoicesLabel";
+            invoicesLabel.Size = new System.Drawing.Size(50, 13);
+            invoicesLabel.TabIndex = 26;
+            invoicesLabel.Text = "Invoices:";
+            // 
+            // parts_AvailableLabel
+            // 
+            parts_AvailableLabel.AutoSize = true;
+            parts_AvailableLabel.Location = new System.Drawing.Point(191, 264);
+            parts_AvailableLabel.Name = "parts_AvailableLabel";
+            parts_AvailableLabel.Size = new System.Drawing.Size(80, 13);
+            parts_AvailableLabel.TabIndex = 28;
+            parts_AvailableLabel.Text = "Parts Available:";
+            // 
             // backButton
             // 
             this.backButton.Location = new System.Drawing.Point(233, 310);
@@ -92,6 +174,7 @@
             this.backButton.TabIndex = 10;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // listBox
             // 
@@ -154,6 +237,31 @@
             this.vehicleBindingNavigator.TabIndex = 12;
             this.vehicleBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -186,17 +294,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -204,7 +305,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -213,49 +314,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // vehicleBindingNavigatorSaveItem
             // 
             this.vehicleBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.vehicleBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("vehicleBindingNavigatorSaveItem.Image")));
             this.vehicleBindingNavigatorSaveItem.Name = "vehicleBindingNavigatorSaveItem";
-            this.vehicleBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.vehicleBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.vehicleBindingNavigatorSaveItem.Text = "Save Data";
             this.vehicleBindingNavigatorSaveItem.Click += new System.EventHandler(this.vehicleBindingNavigatorSaveItem_Click);
-            // 
-            // vINLabel
-            // 
-            vINLabel.AutoSize = true;
-            vINLabel.Location = new System.Drawing.Point(191, 56);
-            vINLabel.Name = "vINLabel";
-            vINLabel.Size = new System.Drawing.Size(28, 13);
-            vINLabel.TabIndex = 12;
-            vINLabel.Text = "VIN:";
             // 
             // vINTextBox
             // 
@@ -265,15 +339,6 @@
             this.vINTextBox.Size = new System.Drawing.Size(100, 20);
             this.vINTextBox.TabIndex = 13;
             // 
-            // modelLabel
-            // 
-            modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(191, 82);
-            modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(39, 13);
-            modelLabel.TabIndex = 14;
-            modelLabel.Text = "Model:";
-            // 
             // modelTextBox
             // 
             this.modelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehicleBindingSource, "Model", true));
@@ -281,15 +346,6 @@
             this.modelTextBox.Name = "modelTextBox";
             this.modelTextBox.Size = new System.Drawing.Size(100, 20);
             this.modelTextBox.TabIndex = 15;
-            // 
-            // yearLabel
-            // 
-            yearLabel.AutoSize = true;
-            yearLabel.Location = new System.Drawing.Point(191, 108);
-            yearLabel.Name = "yearLabel";
-            yearLabel.Size = new System.Drawing.Size(32, 13);
-            yearLabel.TabIndex = 16;
-            yearLabel.Text = "Year:";
             // 
             // yearTextBox
             // 
@@ -299,15 +355,6 @@
             this.yearTextBox.Size = new System.Drawing.Size(100, 20);
             this.yearTextBox.TabIndex = 17;
             // 
-            // mileageLabel
-            // 
-            mileageLabel.AutoSize = true;
-            mileageLabel.Location = new System.Drawing.Point(191, 134);
-            mileageLabel.Name = "mileageLabel";
-            mileageLabel.Size = new System.Drawing.Size(47, 13);
-            mileageLabel.TabIndex = 18;
-            mileageLabel.Text = "Mileage:";
-            // 
             // mileageTextBox
             // 
             this.mileageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehicleBindingSource, "Mileage", true));
@@ -315,15 +362,6 @@
             this.mileageTextBox.Name = "mileageTextBox";
             this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
             this.mileageTextBox.TabIndex = 19;
-            // 
-            // date_RecievedLabel
-            // 
-            date_RecievedLabel.AutoSize = true;
-            date_RecievedLabel.Location = new System.Drawing.Point(191, 160);
-            date_RecievedLabel.Name = "date_RecievedLabel";
-            date_RecievedLabel.Size = new System.Drawing.Size(82, 13);
-            date_RecievedLabel.TabIndex = 20;
-            date_RecievedLabel.Text = "Date Recieved:";
             // 
             // date_RecievedTextBox
             // 
@@ -333,15 +371,6 @@
             this.date_RecievedTextBox.Size = new System.Drawing.Size(100, 20);
             this.date_RecievedTextBox.TabIndex = 21;
             // 
-            // date_ReturnedLabel
-            // 
-            date_ReturnedLabel.AutoSize = true;
-            date_ReturnedLabel.Location = new System.Drawing.Point(191, 186);
-            date_ReturnedLabel.Name = "date_ReturnedLabel";
-            date_ReturnedLabel.Size = new System.Drawing.Size(80, 13);
-            date_ReturnedLabel.TabIndex = 22;
-            date_ReturnedLabel.Text = "Date Returned:";
-            // 
             // date_ReturnedTextBox
             // 
             this.date_ReturnedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehicleBindingSource, "Date Returned", true));
@@ -349,15 +378,6 @@
             this.date_ReturnedTextBox.Name = "date_ReturnedTextBox";
             this.date_ReturnedTextBox.Size = new System.Drawing.Size(100, 20);
             this.date_ReturnedTextBox.TabIndex = 23;
-            // 
-            // ownerLabel
-            // 
-            ownerLabel.AutoSize = true;
-            ownerLabel.Location = new System.Drawing.Point(191, 212);
-            ownerLabel.Name = "ownerLabel";
-            ownerLabel.Size = new System.Drawing.Size(41, 13);
-            ownerLabel.TabIndex = 24;
-            ownerLabel.Text = "Owner:";
             // 
             // ownerTextBox
             // 
@@ -367,15 +387,6 @@
             this.ownerTextBox.Size = new System.Drawing.Size(100, 20);
             this.ownerTextBox.TabIndex = 25;
             // 
-            // invoicesLabel
-            // 
-            invoicesLabel.AutoSize = true;
-            invoicesLabel.Location = new System.Drawing.Point(191, 238);
-            invoicesLabel.Name = "invoicesLabel";
-            invoicesLabel.Size = new System.Drawing.Size(50, 13);
-            invoicesLabel.TabIndex = 26;
-            invoicesLabel.Text = "Invoices:";
-            // 
             // invoicesTextBox
             // 
             this.invoicesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehicleBindingSource, "Invoices", true));
@@ -383,15 +394,6 @@
             this.invoicesTextBox.Name = "invoicesTextBox";
             this.invoicesTextBox.Size = new System.Drawing.Size(100, 20);
             this.invoicesTextBox.TabIndex = 27;
-            // 
-            // parts_AvailableLabel
-            // 
-            parts_AvailableLabel.AutoSize = true;
-            parts_AvailableLabel.Location = new System.Drawing.Point(191, 264);
-            parts_AvailableLabel.Name = "parts_AvailableLabel";
-            parts_AvailableLabel.Size = new System.Drawing.Size(80, 13);
-            parts_AvailableLabel.TabIndex = 28;
-            parts_AvailableLabel.Text = "Parts Available:";
             // 
             // parts_AvailableTextBox
             // 
@@ -403,11 +405,19 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(442, 56);
+            this.pictureBox.Location = new System.Drawing.Point(419, 39);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(138, 134);
             this.pictureBox.TabIndex = 30;
             this.pictureBox.TabStop = false;
+            // 
+            // notesTxtBx
+            // 
+            this.notesTxtBx.Location = new System.Drawing.Point(421, 183);
+            this.notesTxtBx.Name = "notesTxtBx";
+            this.notesTxtBx.Size = new System.Drawing.Size(136, 124);
+            this.notesTxtBx.TabIndex = 31;
+            this.notesTxtBx.Text = "";
             // 
             // CarInfo
             // 
@@ -436,6 +446,7 @@
             this.Controls.Add(this.vehicleBindingNavigator);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.backButton);
+            this.Controls.Add(this.notesTxtBx);
             this.Name = "CarInfo";
             this.Text = "CarInfo";
             this.Load += new System.EventHandler(this.CarInfo_Load);
@@ -481,5 +492,6 @@
         private System.Windows.Forms.TextBox invoicesTextBox;
         private System.Windows.Forms.TextBox parts_AvailableTextBox;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.RichTextBox notesTxtBx;
     }
 }

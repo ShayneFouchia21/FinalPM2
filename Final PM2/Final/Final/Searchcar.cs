@@ -34,13 +34,23 @@ namespace Final
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            //this.vehicleTableAdapter.SearchCarModel(searchCarTextBox.Text);
+            //create car info form
             CarInfo carInfoForm = new CarInfo();
             carInfoForm.ShowDialog();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            //close form
             this.Close();
+        }
+
+        private void addBttn_Click(object sender, EventArgs e)
+        {
+            //create car info form
+            CarInfo carInfoForm = new CarInfo();
+            carInfoForm.ShowDialog();
         }
     }
 }
